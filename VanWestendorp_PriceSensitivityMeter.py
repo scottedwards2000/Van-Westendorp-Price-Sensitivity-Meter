@@ -228,7 +228,7 @@ def plot_function(cdfs,
                     )
     
     fig = go.Figure(data=data, layout=layout)
-    iplot(fig)
+    fig.show()
 
     return None
 
