@@ -228,9 +228,9 @@ def plot_function(cdfs,
                     )
     
     fig = go.Figure(data=data, layout=layout)
-    fig.show()
+    #fig.show()
 
-    return None
+    return fig
 
 
 # Get results
@@ -261,7 +261,7 @@ def results(df, price_cols, plot=True, plot_title=""):
                       Optimal_Price_Point, OPP_height,
                       plot_title)
 
-
+    fig.show()
 '''
 If you'd like to contribute to make this code better, write me at Twitter @vivmarquez
 If you thought it was useful, also tweet me, it would make me happy :)
