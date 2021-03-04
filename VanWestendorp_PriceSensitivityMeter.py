@@ -254,14 +254,14 @@ def results(df, price_cols, plot=True, plot_title=""):
     print(f"Optimal Price Point: ${Optimal_Price_Point:.2f}")
 
     if plot==True:
-        plot_function(cdfs, 
+        figx = plot_function(cdfs, 
                       Point_of_Marginal_Cheapness, PMC_height,
                       Point_of_Marginal_Expensiveness, PME_height,
                       Indifference_Price_Point, IPP_height,
                       Optimal_Price_Point, OPP_height,
                       plot_title)
 
-    fig.show()
+    return figx
 '''
 If you'd like to contribute to make this code better, write me at Twitter @vivmarquez
 If you thought it was useful, also tweet me, it would make me happy :)
