@@ -50,7 +50,7 @@ def cdf_table(df, price_cols, interpolate=True):
     '''
     Re-creating R's function output$data_vanwestendorp
     '''
-    df.rename(columns={price_cols[0]: "Too Cheap", price_cols[1]: "Cheap", price_cols[2]: "Expensive", price_cols[3]: "Too Expensive"})
+    df = df.rename(columns={price_cols[0]: "Too Cheap", price_cols[1]: "Cheap", price_cols[2]: "Expensive", price_cols[3]: "Too Expensive"})
     cdfs = [cdf(df, 'Too Cheap'), cdf(df, 'Cheap'), cdf(df, 'Expensive'), cdf(df, 'Too Expensive')]
     cdfs = reduce(lambda left, right: pd.merge(left, right, on=['Price'], how='outer'), cdfs).sort_values('Price')
     cdfs = cdfs.fillna(method='ffill').fillna(0)
