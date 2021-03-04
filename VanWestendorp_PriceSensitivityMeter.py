@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from functools import reduce
 
-import plotly.graph_objs as go
+import plotly.graph_objects as go
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 
 import warnings
